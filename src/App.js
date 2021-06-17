@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 
 const App = (props) => {
   const [state,setState] = useState(props)
-  console.log(state)
   const {name,price} = state
   
 const reset = () => {
