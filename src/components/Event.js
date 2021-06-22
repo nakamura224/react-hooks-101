@@ -1,10 +1,10 @@
-import React,{useReducer,useState} from 'react'
+import React from 'react'
 
-const Event =({dispach,event}) =>{
+const Event =({dispatch,event}) =>{
   
   const handleClickDeleteButton=()=>{
     const result = window.confirm(`イベント(id = ${event.id})を本当に削除してもよろしいですか？`)
-    if (result) dispach({type:'DELETE_EVENT',id:event.id})
+    if (result) dispatch({type:'DELETE_EVENT',id:event.id})
 }
 return(
   <tr>
