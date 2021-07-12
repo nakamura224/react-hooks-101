@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import {
   CREATE_EVENT,
   DELETE_ALL_EVENTS
 } from '../actions'
+import AppContext from '../contexts/AppContext'
 
-const EventForm = ({state,dispatch}) =>{
-  const [title,setTitle] = useState('')
-  const [body,setBody] = useState('')
+const EventForm = () =>{
+  const { state, dispatch } = useContext(AppContext)
+  const [title, setTitle] = useState('')
+  const [body, setBody] = useState('')
 
   const addEvent = (e) => {
     e.preventDefault()//画面の再レンダリングを防止できる
