@@ -6,6 +6,7 @@ import Events from './Events'
 import AppContext from '../contexts/AppContext'
 
 
+
 const App = () => {
   //const [state,setState] = useState(props)
   const initialState = {//まず状態を初期化
